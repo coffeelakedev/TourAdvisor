@@ -12,11 +12,14 @@ class SignInHandler(tornado.web.RequestHandler):
         print(self)
         email = self.get_argument('email')
         pwd = self.get_argument('pwd')
-        if backend.user_auth(email, pwd):
-            self.redirect("dashboard.html")
-        else:
-            self.redirect('signin.html')
-            self.alert('Invalid Credentials!')
+        if email != '' and pwd != '':
+            self.write('Please wait....')
+            if backend.user_auth(email, pwd):
+                self.redirect("dashboard.html")
+            else:
+                self.redirect('signin.html')
+                self.alert('Invalid Credentials!')
+        self.redirect('signin.html')
 
 class SignUpHandler(tornado.web.RequestHandler):
     def get(self):
@@ -24,11 +27,14 @@ class SignUpHandler(tornado.web.RequestHandler):
         email = self.get_argument('email')
         pwd = self.get_argument('pwd')
         cpwd = self.get_argument('cpwd')
-        self.write('Please wait....')
-        if backend.user_register(email, pwd, cpwd):
-            self.redirect("dashboard.html")
-        else:
-            self.redirect('signin.html')
+        
+        if email != '' and pwd != '' and cpwd != '':
+            self.write('Please wait....')
+            if backend.user_register(email, pwd, cpwd):
+                self.redirect("dashboard.html")
+            else:
+                self.redirect('signin.html')
+        self.redirect('signup.html')
 
 def CreateApp():
     return tornado.web.Application([

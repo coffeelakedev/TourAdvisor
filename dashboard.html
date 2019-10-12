@@ -5,6 +5,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Import Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection"/>
+        <link rel="stylesheet" href="custom-scrollbar.css" media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -26,11 +27,89 @@
             </div>
         </nav>
         <div class="row">
-            <div class="z-depth-2 s12" style="float:left;background:whitesmoke;width:25%;height:95%;position:fixed;">
+            <div class="z-depth-2 s12" style="z-index: -1;float:left;background:whitesmoke;width:35%;height:95%;position:fixed;">
+                <div style="overflow-y:scroll;height: 95%;">
                 <h5>&nbspPending</h5>
+                <div id="pending">
+                        <div class="row">
+                                <div class="col s12">
+                                  <div class="card">
+                                    <div class="card-image">
+                                      <img src="sample-1.jpg">
+                                      <span class="card-title">Card Title</span>
+                                    </div>
+                                    <div class="card-content">
+                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                      I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a href="#">This is a link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                                       
+                </div>
                 <h5>&nbspRecommended</h5>
+                <div id="recommended">
+                        <div class="row">
+                                <div class="col s12">
+                                  <div class="card">
+                                    <div class="card-image">
+                                      <img src="sample-1.jpg">
+                                      <span class="card-title">Card Title</span>
+                                    </div>
+                                    <div class="card-content">
+                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                      I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a href="#">This is a link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                </div>
                 <h5>&nbspTrending</h5>
+                <div id="trending">
+                        <div class="row">
+                                <div class="col s12">
+                                  <div class="card">
+                                    <div class="card-image">
+                                      <img src="sample-1.jpg">
+                                      <span class="card-title">Card Title</span>
+                                    </div>
+                                    <div class="card-content">
+                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                      I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a href="#">This is a link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                </div>
                 <h5>&nbspHistory</h5>
+                <div id="history">
+                        <div class="row">
+                                <div class="col s12">
+                                  <div class="card">
+                                    <div class="card-image">
+                                      <img src="sample-1.jpg">
+                                      <span class="card-title">Card Title</span>
+                                    </div>
+                                    <div class="card-content">
+                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                      I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a href="#">This is a link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                </div>
             </div>
         </div>
         <!--JavaScript at end of body for optimized loading and minified -->

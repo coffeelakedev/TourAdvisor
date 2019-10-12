@@ -1,9 +1,0 @@
-		<!--Mobile Detection Lib-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
-		<script>
-			var md = new MobileDetect(window.navigator.userAgent);
-			if (md.mobile()) {
-				console.log("Mobile Detected!")
-
-			}
-		</script>

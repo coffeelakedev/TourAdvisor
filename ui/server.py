@@ -12,8 +12,10 @@ class PlanHandler(tornado.web.RequestHandler):
     def get(self):
         print(self)
         account = backend.add_plan(self.get_argument('plan'))
-
         pprint.pprint(account)
+        for i in account:
+            self.write('/addcard?title=' + i[0])
+            self.get_body_argument("Feed","")
         #self.redirect('dashboard.html')
 
 class SignInHandler(tornado.web.RequestHandler):

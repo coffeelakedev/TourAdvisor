@@ -3,7 +3,7 @@ import tornado.web
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.redirect("https://localhost:8000/signin.html")
+        self.redirect("/signin.html")
 
 class SignInHandler(tornado.web.RequestHandler):
     def get(self):
@@ -16,4 +16,3 @@ if __name__ == "__main__":
     app = CreateApp()
     app.listen(8000)
     tornado.ioloop.IOLoop.current().start()
-    

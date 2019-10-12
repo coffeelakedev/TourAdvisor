@@ -1,0 +1,6 @@
+coffeelakedevs@gmail.com
+krra@2019
+Linked With *Firebase*, *GitHub*
+https://touradvisorapp.firebaseio.com/ [Firebase Database]
+https://github.com/coffeelakedev/TourAdvisor [GitHub Repo URL]
+https://github.com/coffeelakedev/TourAdvisor.git [GitHub Project Git]

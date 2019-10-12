@@ -1,0 +1,3 @@
+user_auth('n', '3')
+add_plan('VIT Chennai', 0)
+place_detail('ChIJZx9Jjq9ZUjoRLX11GxNCS5Q')

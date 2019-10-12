@@ -10,7 +10,6 @@ function getJSONP(url, success) {
 			alert("Error");
 		}      
    });
-
 }
 
 function new_plan()

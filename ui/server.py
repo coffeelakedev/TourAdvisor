@@ -10,9 +10,9 @@ class SignInHandler(tornado.web.RequestHandler):
         print(self)
 
 def CreateApp():
-    return tornado.web.Application([(r"/", MainHandler), (r"/test", SignInHandler), (r"/(.*)", tornado.web.StaticFileHandler,{'path':'./'})])
+    return tornado.web.Application([(r"/", MainHandler), (r"/signin", SignInHandler), (r"/(.*)", tornado.web.StaticFileHandler,{'path':'./'})])
 
 if __name__ == "__main__":
     app = CreateApp()
-    app.listen(8080)
+    app.listen(8000)
     tornado.ioloop.IOLoop.current().start()

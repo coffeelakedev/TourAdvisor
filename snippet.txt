@@ -39,3 +39,26 @@
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
 
+<!-- Modal Structure -->
+  <div id="plan-model" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Make A Plan</h4>
+      <p>Please enter your budget</p>
+      <div class="row">
+            <div class="input-field col s12">
+              <input id="budget-textinput" class="validate">
+              <label for="budget-textinput">Budget</label>
+        </div>
+      </div>
+      <p>Enter your destination</p>
+      <div class="row">
+            <div class="input-field col s12">
+              <input id="destination-textinput" class="validate">
+              <label for="destination-textinput">Destination</label>
+        </div>
+      </div>
+    <div class="modal-footer">
+      <a onclick="" class="modal-close waves-effect waves-green btn-flat">Search</a>
+    </div>
+  </div>
+

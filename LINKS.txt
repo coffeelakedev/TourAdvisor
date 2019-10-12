@@ -37,3 +37,4 @@ Maps JavaScript API
 q=university%20of%20san%20francisco
 &t=&z=13&ie=UTF8&iwloc=&output=embed"
 
+plan-model -> ID of model

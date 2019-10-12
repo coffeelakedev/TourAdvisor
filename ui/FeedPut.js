@@ -43,3 +43,10 @@ function new_plan()
   </div>'
 
 }
+
+
+function SignIn() {
+  const email = document.getElementById("myInput").value;
+  const pwd = document.getElementById("myInput").value;
+	location.href = '/signin?email=' + email + '&pwd=' + pwd;
+}

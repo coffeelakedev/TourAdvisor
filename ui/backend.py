@@ -18,12 +18,9 @@ def user_auth(user, pwd):
     return False
 
 def user_register(user, pwd, confirm_pwd):
-    try:
-        if pwd == confirm_pwd:
-            db.post('/users/' + user, pwd)
-            return True
-    except:
-        pass
+    if pwd == confirm_pwd:
+        db.post('/users/' + user, pwd)
+        return True
     return False
 
 def add_plan(destination, budget):

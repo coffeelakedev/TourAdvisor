@@ -2,6 +2,7 @@ import tornado.ioloop
 import tornado.web
 
 import backend
+import pprint
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
@@ -10,8 +11,9 @@ class MainHandler(tornado.web.RequestHandler):
 class PlanHandler(tornado.web.RequestHandler):
     def get(self):
         print(self)
-        backend.add_plan(self.get_argument('plan'))
-        self.redirect('dashboard.html')
+        account = backend.add_plan(self.get_argument('plan'))
+        pprint.pprint('')
+        #self.redirect('dashboard.html')
 
 class SignInHandler(tornado.web.RequestHandler):
     def get(self):

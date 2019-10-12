@@ -24,5 +24,6 @@ function SignUp() {
 }
 
 function AddPlan() {
-    location.href = '/plan?plan=' + document.getElementById("plan").value;
+    var plan = prompt("Enter your trip: ");
+    location.href = '/plan?plan=' + plan;
 }

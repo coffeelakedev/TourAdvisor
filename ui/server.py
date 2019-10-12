@@ -3,7 +3,7 @@ import tornado.web
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.redirect("https://touradvisorapp.web.app/dashboard.html")
+        self.redirect("https://touradvisorapp.web.app/signin.html")
 
 def CreateApp():
     return tornado.web.Application([(r"/", MainHandler), ])

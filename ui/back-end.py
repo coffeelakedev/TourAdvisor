@@ -29,13 +29,16 @@ def add_plan(destination, budget):
     global google_autocomplete
     if AUTH:
         choice = []
-        google_autocomplete += '&key=' + key + '&input=' + destination.replace(' ', '+')
+        google_autocomplete += '?key=' + key + '&input=' + destination.replace(' ', '+')
+        print(google_autocomplete)
         with urllib.request.urlopen(google_autocomplete) as url:
             data = json.loads(url.read().decode())['predictions']
-            pprint.pprint(data)
+            # pprint.pprint(data)
             for i in data:
                 for j in i:
                     if j == 'description':
                         choice.append(i[j])
         return choice
     return False
+
+

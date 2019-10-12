@@ -22,3 +22,7 @@ function SignUp() {
     const cpwd = document.getElementById("cpassword").value;
     location.href = '/signup?email=' + email + '&pwd=' + pwd + '&cpwd=' + cpwd;
 }
+
+function AddPlan() {
+    location.href = '/plan?plan=' + document.getElementById("plan").value;
+}

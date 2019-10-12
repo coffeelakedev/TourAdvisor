@@ -7,6 +7,12 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.redirect("signin.html")
 
+class PlanHandler(tornado.web.RequestHandler):
+    def get(self):
+        print(self)
+        backend.add_plan(self.get_argument('plan'))
+        self.redirect('dashboard.html')
+
 class SignInHandler(tornado.web.RequestHandler):
     def get(self):
         print(self)
@@ -39,6 +45,7 @@ class SignUpHandler(tornado.web.RequestHandler):
 def CreateApp():
     return tornado.web.Application([
         (r"/", MainHandler), (r"/signin", SignInHandler), (r"/signup", SignUpHandler),
+        (r"/plan", PlanHandler),
         (r"/(.*)", tornado.web.StaticFileHandler, {'path':'./'})
     ])
 

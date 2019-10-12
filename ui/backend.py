@@ -23,7 +23,7 @@ def user_register(user, pwd, confirm_pwd):
         return True
     return False
 
-def add_plan(destination, budget):
+def add_plan(destination):
     global google_autocomplete
     if AUTH:
         choice = []
@@ -31,7 +31,6 @@ def add_plan(destination, budget):
         print(link)
         with urllib.request.urlopen(link) as url:
             data = json.loads(url.read().decode())['predictions']
-            # pprint.pprint(data)
             for i in data:
                 for j in i:
                     if j == 'description':

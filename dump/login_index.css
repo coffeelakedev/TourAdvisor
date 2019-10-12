@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.LoginLabel
+{
+	font-family : Product Sans;
+	font-size : 49px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+.NormalCharacterStyle3
+{
+	font-family : Product Sans;
+	font-size : 31px;
+	color : #CCCCCC;
+	color : rgb(204, 204, 204);
+}
+.NormalCharacterStyle2
+{
+	font-family : Product Sans;
+	font-size : 31px;
+	color : #CCCCCC;
+	color : rgb(204, 204, 204);
+}
+.NormalCharacterStyle1
+{
+	font-family : Product Sans;
+	font-size : 31px;
+	color : #CC5733;
+	color : rgb(204, 87, 51);
+}
+.NormalCharacterStyle
+{
+	font-family : Product Sans;
+	font-size : 24px;
+	color : #CC5733;
+	color : rgb(204, 87, 51);
+}

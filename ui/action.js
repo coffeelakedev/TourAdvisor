@@ -27,3 +27,5 @@ function AddPlan() {
     var plan = prompt("Enter your trip: ");
     location.href = '/plan?plan=' + plan;
 }
+
+

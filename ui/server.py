@@ -13,9 +13,49 @@ class PlanHandler(tornado.web.RequestHandler):
         print(self)
         account = backend.add_plan(self.get_argument('plan'))
         pprint.pprint(account)
+        feedHtml = open('feed.html', 'w')
+        feedHtml.write('')
+        feedHtml.close()
+        feedHtml = open('feed.html', 'a')
+        feedHtml.write("""
+        <!DOCTYPE html>
+        <html>
+            <head>
+            <!--Import Google Icon Font-->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <!--Import materialize.css-->
+            <!-- Compiled and minified CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <!--Let browser know website is optimized for mobile-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </head>
+            <body>
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+""")
         for i in account:
-            self.write('/addcard?title=' + i[0])
-            self.get_body_argument("Feed","")
+            CARD = """
+<div class="row">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+                <p>""" + i[0] + """</p>
+            </div>
+            <div class="card-action">
+                <a href="#">Book</a>
+            </div>
+        </div>
+    </div>
+</div>
+"""
+            feedHtml.write(CARD)
+        feedHtml.write('</body></html>')
+        feedHtml.close()
+        self.render('dashboard.html')
         #self.redirect('dashboard.html')
 
 class SignInHandler(tornado.web.RequestHandler):

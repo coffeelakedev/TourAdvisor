@@ -25,6 +25,7 @@ function SignUp() {
 
 function AddPlan() {
     var plan = prompt("Enter your trip: ");
+    var budget = prompt("Enter your budget: ");
     location.href = '/plan?plan=' + plan;
 }
 
